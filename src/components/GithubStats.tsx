@@ -278,7 +278,7 @@ async function GitHubStatsContent() {
               <div className="text-white text-start font-semibold text-lg">
                 Most Active Repository
               </div>
-              <div className="text-blue-300 text-sm">
+              <div className="text-blue-300 text-sm text-start break-words">
                 <span className="font-mono">{mostActiveRepo.name}</span>
                 {mostActiveRepo.organization !== "personal" && (
                   <span className="text-gray-400">
@@ -313,39 +313,41 @@ async function GitHubStatsContent() {
                 key={repo.name}
                 className="flex items-center justify-between bg-gray-800/50 border border-gray-700 rounded-lg p-3 hover:border-gray-600 transition-colors duration-200"
               >
-                <div className="flex items-center gap-3">
-                  <div className="text-gray-500 text-sm font-mono w-6">
+                <div className="flex flex-col sm:flex-row items-start sm:items-center gap-3">
+                  <div className="text-gray-500 text-sm font-mono w-6 text-start">
                     #{index + 1}
                   </div>
-                  <div className="text-white font-mono text-sm">
+                  <div className="text-white font-mono text-sm text-start">
                     {repo.name}
                   </div>
-                  {repo.organization !== "personal" && (
-                    <span className="text-gray-400 text-xs bg-gray-700 px-2 py-1 rounded">
-                      {repo.organization}
+                  <div className="flex flex-col sm:flex-row items-center gap-3">
+                    {repo.organization !== "personal" && (
+                      <span className="text-gray-400 text-xs bg-gray-700 px-2 py-1 rounded">
+                        {repo.organization}
+                      </span>
+                    )}
+                    <span
+                      className={`text-xs px-2 py-1 rounded ${
+                        repo.isPrivate
+                          ? "text-amber-400 bg-amber-900/20 border border-amber-500/30"
+                          : "text-green-400 bg-green-900/20 border border-green-500/30"
+                      }`}
+                    >
+                      {repo.isPrivate ? "Private" : "Public"}
                     </span>
-                  )}
-                  <span
-                    className={`text-xs px-2 py-1 rounded ${
-                      repo.isPrivate
-                        ? "text-amber-400 bg-amber-900/20 border border-amber-500/30"
-                        : "text-green-400 bg-green-900/20 border border-green-500/30"
-                    }`}
-                  >
-                    {repo.isPrivate ? "Private" : "Public"}
-                  </span>
-                  {repo.stars > 0 && (
-                    <div className="flex items-center gap-1 text-yellow-400 text-xs">
-                      <svg
-                        className="w-4 h-4"
-                        fill="currentColor"
-                        viewBox="0 0 20 20"
-                      >
-                        <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                      </svg>
-                      {repo.stars}
-                    </div>
-                  )}
+                    {repo.stars > 0 && (
+                      <div className="flex items-center gap-1 text-yellow-400 text-xs">
+                        <svg
+                          className="w-4 h-4"
+                          fill="currentColor"
+                          viewBox="0 0 20 20"
+                        >
+                          <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                        </svg>
+                        {repo.stars}
+                      </div>
+                    )}
+                  </div>
                 </div>
                 <div className="text-blue-400 text-sm font-semibold">
                   {repo.commits.toLocaleString()}

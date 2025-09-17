@@ -416,7 +416,7 @@ export default function WorkSection() {
       <div className="max-w-6xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-16">
-          <h2 className="text-5xl md:text-6xl font-bold text-gray-600 mb-4">
+          <h2 className="text-5xl md:text-6xl font-bold text-muted-foreground mb-4">
             My Work
             <span className="block w-32 h-1 bg-red-500 mx-auto mt-4"></span>
           </h2>

@@ -11,7 +11,7 @@ interface GitHubStats {
   }>;
 }
 
-async function fetchGitHubStats(): Promise<GitHubStats> {
+async function fetchGitHubStats(): Promise<GitHubStats | null> {
   const response = await fetch(
     `${env.NEXT_PUBLIC_BASE_URL}/api/get-github-stats`,
     {
@@ -20,7 +20,7 @@ async function fetchGitHubStats(): Promise<GitHubStats> {
   );
 
   if (!response.ok) {
-    throw new Error("Failed to fetch GitHub stats");
+    return null;
   }
 
   return response.json();
@@ -96,8 +96,53 @@ function LoadingSkeleton() {
   );
 }
 
+function ErrorSkeleton() {
+  return (
+    <div className="space-y-6 w-full">
+      <div className="text-center">
+        <h3 className="  text-red-400 mb-8">
+          Error fetching GitHub stats right now. Try again later.
+        </h3>
+        <div className="h-8 bg-gray-700 rounded w-48 mx-auto mb-2"></div>
+        <div className="h-4 bg-gray-700 rounded w-32 mx-auto"></div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        {[1, 2, 3].map((i) => (
+          <div
+            key={i}
+            className="bg-gray-800 border border-gray-700 rounded-lg p-6"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-8 h-8 bg-gray-700 rounded"></div>
+              <div>
+                <div className="h-8 bg-gray-700 rounded w-16 mb-2"></div>
+                <div className="h-4 bg-gray-700 rounded w-20"></div>
+              </div>
+            </div>
+          </div>
+        ))}
+      </div>
+      {/* Additional skeleton elements to match the full content height */}
+      <div className="space-y-4">
+        <div className="h-6 bg-gray-700 rounded w-32 mx-auto"></div>
+        <div className="space-y-2">
+          {[1, 2, 3, 4, 5].map((i) => (
+            <div
+              key={i}
+              className="h-12 bg-gray-800 border border-gray-700 rounded-lg"
+            ></div>
+          ))}
+        </div>
+      </div>
+    </div>
+  );
+}
+
 async function GitHubStatsContent() {
   const stats = await fetchGitHubStats();
+  if (!stats) {
+    return <ErrorSkeleton />;
+  }
 
   // Calculate additional stats
   const totalRepos = stats.repoStats.length;

@@ -66,7 +66,6 @@ export default {
 
   // Experimental features for better performance
   experimental: {
-    optimizeCss: true,
     scrollRestoration: true,
   },
 

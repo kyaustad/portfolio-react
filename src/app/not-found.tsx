@@ -21,14 +21,14 @@ export default function NotFound() {
 
         {/* Error Message */}
         <h1 className="text-4xl font-bold text-gray-200 mb-4">
-          Page Not Found
+          {`Page Not Found`}
         </h1>
         <h2 className="text-2xl font-semibold text-gray-300 mb-6">
-          Looks like you're lost
+          {`Looks like you're lost`}
         </h2>
         <p className="text-gray-400 mb-8 leading-relaxed">
-          The page you're looking for doesn't exist or has been moved. Let's get
-          you back on track.
+          {`The page you're looking for doesn't exist or has been moved. Let's get
+          you back on track.`}
         </p>
 
         {/* Action Buttons */}

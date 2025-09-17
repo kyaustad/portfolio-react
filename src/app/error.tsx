@@ -21,13 +21,13 @@ export default function Error({
         </div>
 
         {/* Error Message */}
-        <h1 className="text-4xl font-bold text-gray-200 mb-4">Oops!</h1>
+        <h1 className="text-4xl font-bold text-gray-200 mb-4">{`Oops!`}</h1>
         <h2 className="text-2xl font-semibold text-gray-300 mb-6">
-          Something went wrong
+          {`Something went wrong`}
         </h2>
         <p className="text-gray-400 mb-8 leading-relaxed">
-          We encountered an unexpected error. Don't worry, it happens to the
-          best of us.
+          {`We encountered an unexpected error. Don't worry, it happens to the
+          best of us.`}
         </p>
 
         {/* Action Buttons */}
@@ -39,7 +39,7 @@ export default function Error({
             className="bg-secondary hover:bg-secondary/80 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
           >
             <RefreshCwIcon className="w-5 h-5" />
-            Try Again
+            {`Try Again`}
           </Button>
           <Button
             onClick={() => (window.location.href = "/")}
@@ -56,7 +56,7 @@ export default function Error({
         {process.env.NODE_ENV === "development" && (
           <details className="mt-8 text-left">
             <summary className="text-gray-400 cursor-pointer hover:text-gray-300 transition-colors">
-              Error Details
+              {`Error Details`}
             </summary>
             <div className="mt-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
               <pre className="text-sm text-gray-300 overflow-auto">

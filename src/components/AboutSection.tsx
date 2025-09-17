@@ -118,7 +118,7 @@ export default function AboutSection() {
             <SkillCard icon={<CssIcon className="w-16 h-16" />} text="CSS" />
             <SkillCard
               icon={<TailwindcssIconDark className="w-16 h-16" />}
-              text="TailwindCSS"
+              text="Tailwind CSS"
             />
             <SkillCard
               icon={<ExpressjsIconDark className="w-16 h-16" />}
@@ -151,7 +151,10 @@ export default function AboutSection() {
               text="MongoDB"
             />
             <SkillCard icon={<CppIcon className="w-16 h-16" />} text="C++" />
-            <SkillCard icon={<UnrealEngineIcon className="w-16 h-16" />} />
+            <SkillCard
+              icon={<UnrealEngineIcon className="w-16 h-16" />}
+              text="Unreal Engine"
+            />
             <SkillCard
               icon={<BlenderIcon className="w-16 h-16" />}
               text="Blender"

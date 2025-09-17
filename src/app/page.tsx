@@ -5,6 +5,9 @@ import ContactSection from "@/components/ContactSection";
 import Header from "@/components/Header";
 import GitHubStats from "@/components/GithubStats";
 
+// Force dynamic server side rendering
+export const dynamic = "force-dynamic";
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gray-900">

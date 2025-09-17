@@ -1,0 +1,32 @@
+{
+  "name": "Kyle Austad - Full Stack Developer Portfolio",
+  "short_name": "Kyle Austad",
+  "description": "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#111827",
+  "theme_color": "#ef4444",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/favicon.ico",
+      "sizes": "32x32",
+      "type": "image/ico"
+    },
+    {
+      "src": "/apple-touch-icon.webp",
+      "sizes": "180x180",
+      "type": "image/webp"
+    },
+
+    {
+      "src": "/headshot.webp",
+      "sizes": "512x512",
+      "type": "image/webp"
+    }
+  ],
+  "categories": ["portfolio", "developer", "software", "web-development"],
+  "lang": "en",
+  "scope": "/",
+  "id": "kyle-austad-portfolio"
+}

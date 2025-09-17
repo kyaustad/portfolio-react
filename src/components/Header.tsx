@@ -47,7 +47,7 @@ export default function Header() {
           {/* Social Links */}
           <div className="flex items-center gap-4">
             <a
-              href="https://linkedin.com/in/kyle"
+              href="https://www.linkedin.com/in/kyle-austad/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-blue-400 transition-colors duration-200"
@@ -55,7 +55,7 @@ export default function Header() {
               <LinkedInIcon className="min-w-6 min-h-6 text-white" />
             </a>
             <a
-              href="https://github.com/kyle"
+              href="https://github.com/kyaustad"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300 transition-colors duration-200"
@@ -63,7 +63,7 @@ export default function Header() {
               <GithubIcon className="min-w-6 min-h-6 text-white" />
             </a>
             <a
-              href="mailto:kyle@example.com"
+              href="mailto:kyle@kyleaustad.com"
               target="_blank"
               rel="noopener noreferrer"
               className="text-white hover:text-gray-300 transition-colors duration-200"

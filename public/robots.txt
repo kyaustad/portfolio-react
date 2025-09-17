@@ -1,1 +1,11 @@
+User-agent: *
+Allow: /
 
+# Sitemap
+Sitemap: https://kyleaustad.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
+
+# Allow all other content
+Allow: /

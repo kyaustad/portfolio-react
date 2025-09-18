@@ -62,7 +62,7 @@ export default function ContactSection() {
           {/* Contact Methods */}
           <div className="flex flex-col sm:flex-row gap-6 justify-center items-center">
             <a
-              href="mailto:kyle@example.com"
+              href="mailto:kyle@kyleaustad.com"
               className="flex items-center gap-3 bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors duration-200"
             >
               <GmailIcon className="min-w-6 min-h-6 text-white" />
@@ -70,7 +70,7 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="https://linkedin.com/in/kyle"
+              href="https://www.linkedin.com/in/kyle-austad/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors duration-200"
@@ -80,7 +80,7 @@ export default function ContactSection() {
             </a>
 
             <a
-              href="https://github.com/kyle"
+              href="https://github.com/kyaustad"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-3 bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors duration-200"

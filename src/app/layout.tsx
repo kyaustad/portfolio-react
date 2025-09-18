@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     template: "%s | Kyle Austad Portfolio",
   },
   description:
-    "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
+    "Full-stack developer specializing in React, Node.js, creative problem solving, and modern web technologies.",
   keywords: [
     "full stack developer",
     "react developer",

@@ -75,8 +75,7 @@ export default function AboutSection() {
                 </span>
               </div>
               <p className="text-white text-lg leading-relaxed">
-                {`I am a full-stack developer and software engineer. With a background in sales, I know
-                how to work hard.`}
+                {`I am a full-stack developer and software engineer. I build scalable, user-focused applications that solve real business challenges. My experience spans frontend and backend development, while my sales background gives me a unique perspective on creating solutions that not only function but also support revenue and customer engagement.`}
               </p>
             </div>
           </div>

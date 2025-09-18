@@ -88,7 +88,9 @@ export const metadata: Metadata = {
     ],
   },
   manifest: "/site.webmanifest",
-
+  verification: {
+    google: "GVLwcQkDIALQZofNU7OT_OMy6Cy0nOOaAo3QoJrwiYI",
+  },
   alternates: {
     canonical:
       process.env.NEXT_PUBLIC_BASE_URL || "https://portfolio.kyleaustad.com",

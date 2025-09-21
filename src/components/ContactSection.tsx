@@ -9,8 +9,16 @@ import {
   LinkedInIcon,
   PDFIcon,
 } from "./Icons";
+import { useEffect } from "react";
 
 export default function ContactSection() {
+  // useEffect(() => {
+  //   const script = document.createElement("script");
+  //   script.src = "https://contra.com/static/embed/sdk.js";
+  //   script.async = true;
+  //   document.body.appendChild(script);
+  // }, []);
+
   return (
     <section className="py-20 px-4 bg-gray-900">
       <div className="max-w-4xl mx-auto text-center">
@@ -87,6 +95,21 @@ export default function ContactSection() {
             >
               <GithubIcon className="min-w-6 min-h-6 text-white" />
               <span className="text-white">GitHub</span>
+            </a>
+            <a
+              href="https://contra.com/kyle_austad_n2c7ok30?utm_campaign=HireMeOnContra&utm_medium=fe9676dd-36b2-4d40-be86-0006a71b3400"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-3 bg-gray-700 hover:bg-gray-600 px-6 py-3 rounded-lg transition-colors duration-200"
+            >
+              <Image
+                src="/contra.webp"
+                className="min-w-6 min-h-6 max-h-[24px] max-w-[24px] aspect-square"
+                alt="Contra"
+                width={24}
+                height={24}
+              />
+              <span className="text-white">Hire me on Contra</span>
             </a>
           </div>
         </div>

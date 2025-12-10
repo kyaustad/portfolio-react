@@ -76,16 +76,6 @@ export default function Header() {
           {!isMobile && (
             <nav className=" items-center gap-2 flex">
               <button
-                onClick={() => scrollToSection("about")}
-                className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
-                  activeSection === "about"
-                    ? "bg-secondary text-white hover:bg-secondary/80 hover:text-white/80"
-                    : "text-white hover:text-gray-300"
-                }`}
-              >
-                About
-              </button>
-              <button
                 onClick={() => scrollToSection("work")}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
                   activeSection === "work"
@@ -94,6 +84,16 @@ export default function Header() {
                 }`}
               >
                 My Work
+              </button>
+              <button
+                onClick={() => scrollToSection("about")}
+                className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 ${
+                  activeSection === "about"
+                    ? "bg-secondary text-white hover:bg-secondary/80 hover:text-white/80"
+                    : "text-white hover:text-gray-300"
+                }`}
+              >
+                About
               </button>
               <button
                 onClick={() => scrollToSection("contact")}
@@ -131,16 +131,6 @@ export default function Header() {
               >
                 <nav className="items-end gap-2 flex flex-col text-right">
                   <button
-                    onClick={() => scrollToSection("about")}
-                    className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-center w-full ${
-                      activeSection === "about"
-                        ? "bg-secondary text-white hover:bg-secondary/80 hover:text-white/80"
-                        : "text-white hover:text-gray-300 bg-secondary/15"
-                    }`}
-                  >
-                    About
-                  </button>
-                  <button
                     onClick={() => scrollToSection("work")}
                     className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-center w-full ${
                       activeSection === "work"
@@ -149,6 +139,16 @@ export default function Header() {
                     }`}
                   >
                     My Work
+                  </button>
+                  <button
+                    onClick={() => scrollToSection("about")}
+                    className={`px-4 py-2 rounded-lg font-medium transition-colors duration-200 text-center w-full ${
+                      activeSection === "about"
+                        ? "bg-secondary text-white hover:bg-secondary/80 hover:text-white/80"
+                        : "text-white hover:text-gray-300 bg-secondary/15"
+                    }`}
+                  >
+                    About
                   </button>
                   <button
                     onClick={() => scrollToSection("contact")}

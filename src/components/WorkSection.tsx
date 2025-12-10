@@ -486,12 +486,27 @@ export default function WorkSection() {
             </div>
           ))}
         </div>
-        <div className="w-full flex justify-center items-center mt-10">
+        <div
+          id="show-more-projects"
+          className="w-full flex justify-center items-center mt-10"
+        >
           <Button
             variant="ghost"
             size="2xl"
             className="text-lg bg-secondary/50 hover:bg-secondary/70 transition-all duration-300 p-2 group"
-            onClick={() => setShowAllProjects(!showAllProjects)}
+            onClick={() => {
+              setShowAllProjects(!showAllProjects);
+              // Scroll so bottom of work section is bottom of window
+              if (showAllProjects) {
+                window.scrollTo({
+                  top:
+                    (document.getElementById("show-more-projects")?.offsetTop ||
+                      0) -
+                    window.innerHeight / 2,
+                  behavior: "smooth",
+                });
+              }
+            }}
           >
             <div className="flex items-center gap-2 p-2 bg-secondary rounded-lg shadow-inner shadow-black/50 drop-shadow-sm group-hover:scale-95 transition-all duration-300 cursor-pointer">
               <EyeIcon className="min-w-6 min-h-6" />
@@ -570,7 +585,18 @@ export default function WorkSection() {
               variant="ghost"
               size="2xl"
               className="text-lg bg-secondary/50 hover:bg-secondary/70 transition-all duration-300 p-2 group"
-              onClick={() => setShowAllProjects(!showAllProjects)}
+              onClick={() => {
+                setShowAllProjects(!showAllProjects);
+                if (showAllProjects) {
+                  window.scrollTo({
+                    top:
+                      (document.getElementById("show-more-projects")
+                        ?.offsetTop || 0) -
+                      window.innerHeight / 2,
+                    behavior: "smooth",
+                  });
+                }
+              }}
             >
               <div className="flex items-center gap-2 p-2 bg-secondary rounded-lg shadow-inner shadow-black/50 drop-shadow-sm group-hover:scale-95 transition-all duration-300 cursor-pointer">
                 <EyeIcon className="min-w-6 min-h-6" />

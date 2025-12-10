@@ -94,11 +94,12 @@ export default function Home() {
       <div className="min-h-screen bg-gray-900">
         <HeroSection />
         <Header />
-        <div id="about">
-          <AboutSection />
-        </div>
+
         <div id="work">
           <WorkSection />
+        </div>
+        <div id="about">
+          <AboutSection />
         </div>
         <div id="contact">
           <ContactSection />

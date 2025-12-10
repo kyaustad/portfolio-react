@@ -29,7 +29,7 @@ export default function HeroSection() {
           size="2xl"
           className="bg-secondary hover:bg-secondary/80 text-white px-8 py-4 rounded-lg text-lg font-medium transition-colors duration-200 flex items-center gap-2"
           onClick={() => {
-            window.location.href = "#about";
+            window.location.href = "#work";
           }}
         >
           <ArrowDownCircleIcon className="min-w-6 min-h-6" />

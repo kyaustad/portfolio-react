@@ -11,58 +11,42 @@ export default function Error({
   reset: () => void;
 }) {
   return (
-    <div className="min-h-screen bg-gray-900 flex items-center justify-center px-4">
-      <div className="max-w-md w-full text-center">
-        {/* Error Icon */}
+    <div className="flex min-h-screen items-center justify-center bg-cyber-bg px-4 cyber-grid-bg">
+      <div className="w-full max-w-md text-center">
         <div className="mb-8 flex justify-center">
-          <div className="w-24 h-24 bg-red-500/10 rounded-full flex items-center justify-center">
-            <AlertTriangleIcon className="w-12 h-12 text-red-500" />
-          </div>
+          <AlertTriangleIcon className="h-12 w-12 text-cyber-orange" />
         </div>
-
-        {/* Error Message */}
-        <h1 className="text-4xl font-bold text-gray-200 mb-4">{`Oops!`}</h1>
-        <h2 className="text-2xl font-semibold text-gray-300 mb-6">
-          {`Something went wrong`}
-        </h2>
-        <p className="text-gray-400 mb-8 leading-relaxed">
-          {`We encountered an unexpected error. Don't worry, it happens to the
-          best of us.`}
+        <h1 className="mb-4 font-cyber-display text-3xl font-bold text-cyber-text">
+          SYSTEM FAULT
+        </h1>
+        <p className="mb-8 font-cyber-mono text-xs tracking-wide text-cyber-muted">
+          We encountered an unexpected error. You can retry or return home.
         </p>
-
-        {/* Action Buttons */}
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+        <div className="flex flex-col justify-center gap-4 sm:flex-row">
           <Button
             onClick={reset}
-            variant="secondary"
-            size="lg"
-            className="bg-secondary hover:bg-secondary/80 text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
+            className="border border-cyber-cyan/40 bg-transparent text-cyber-cyan hover:bg-cyber-cyan/10"
           >
-            <RefreshCwIcon className="w-5 h-5" />
-            {`Try Again`}
+            <RefreshCwIcon className="mr-2 h-4 w-4" />
+            Try Again
           </Button>
           <Button
             onClick={() => (window.location.href = "/")}
             variant="outline"
-            size="lg"
-            className="border-gray-600 text-gray-300 hover:bg-gray-800 hover:text-white px-6 py-3 rounded-lg font-medium transition-colors duration-200 flex items-center gap-2"
+            className="border-cyber-line bg-transparent text-cyber-muted"
           >
-            <HomeIcon className="w-5 h-5" />
+            <HomeIcon className="mr-2 h-4 w-4" />
             Go Home
           </Button>
         </div>
-
-        {/* Error Details (only in development) */}
         {process.env.NODE_ENV === "development" && (
           <details className="mt-8 text-left">
-            <summary className="text-gray-400 cursor-pointer hover:text-gray-300 transition-colors">
-              {`Error Details`}
+            <summary className="cursor-pointer font-cyber-mono text-xs text-cyber-muted">
+              Error Details
             </summary>
-            <div className="mt-4 p-4 bg-gray-800 rounded-lg border border-gray-700">
-              <pre className="text-sm text-gray-300 overflow-auto">
-                {error.message}
-              </pre>
-            </div>
+            <pre className="mt-4 overflow-auto border border-cyber-line bg-cyber-elevated p-4 text-xs text-cyber-text">
+              {error.message}
+            </pre>
           </details>
         )}
       </div>

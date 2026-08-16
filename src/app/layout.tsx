@@ -19,29 +19,27 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.NEXT_PUBLIC_BASE_URL || "https://kyleaustad.com"
+  ),
   title: {
-    default: "Kyle Austad - Full Stack Developer & Software Engineer",
-    template: "%s | Kyle Austad Portfolio",
+    default: "Kyle Austad — Full-Stack Engineer · Sales · Digital Creator",
+    template: "%s | Kyle Austad",
   },
   description:
-    "Full-stack developer specializing in React, Node.js, creative problem solving, and modern web technologies.",
+    "Cybernetic portfolio showcasing flagship work across Sales, Software, 3D Art, Game Dev, and side-project snippets.",
   keywords: [
     "full stack developer",
     "react developer",
-    "node.js developer",
-    "vue.js developer",
-    "typescript developer",
-    "software engineer",
-    "web developer",
+    "sales",
+    "door to door",
+    "typescript",
     "portfolio",
     "kyle austad",
-    "order place",
-    "voyyance",
-    "shrike lms",
     "unreal engine",
+    "blender",
     "game development",
     "3d rendering",
-    "blender",
   ],
   authors: [{ name: "Kyle Austad" }],
   creator: "Kyle Austad",
@@ -61,24 +59,24 @@ export const metadata: Metadata = {
     type: "website",
     locale: "en_US",
     url: process.env.NEXT_PUBLIC_BASE_URL || "https://kyleaustad.com",
-    title: "Kyle Austad - Full Stack Developer & Software Engineer",
+    title: "Kyle Austad — Portfolio",
     description:
-      "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
+      "Flagship projects across Sales, Software, 3D Art, Game Dev, and Snippets.",
     siteName: "Kyle Austad Portfolio",
     images: [
       {
         url: "/Portfolio.webp",
         width: 1200,
         height: 630,
-        alt: "Kyle Austad - Full Stack Developer Portfolio",
+        alt: "Kyle Austad Portfolio",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Kyle Austad - Full Stack Developer & Software Engineer",
+    title: "Kyle Austad — Portfolio",
     description:
-      "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
+      "Flagship projects across Sales, Software, 3D Art, Game Dev, and Snippets.",
     images: ["/Portfolio.webp"],
     creator: "@kyaustad",
   },
@@ -104,9 +102,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth dark">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased dark`}
+        className={`${geistSans.variable} ${geistMono.variable} ${inter.variable} antialiased`}
       >
         <Analytics />
         {children}

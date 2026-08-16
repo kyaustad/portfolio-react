@@ -11,10 +11,13 @@ export const SkillCard = ({
   text?: string;
 }) => {
   return (
-    <CardContainer>
+    <CardContainer
+      className="h-full w-full min-w-0"
+      containerClassName="h-auto w-full min-w-0"
+    >
       <CardBody
         className={cn(
-          "bg-gray-800 relative group/card border-secondary  rounded-lg p-4 border aspect-square flex flex-col items-center justify-center w-full h-full",
+          "relative group/card aspect-square h-auto w-full min-w-0 flex flex-col items-center justify-center rounded-sm border border-cyber-cyan/30 bg-cyber-elevated/80 p-3 sm:p-4",
           className
         )}
       >
@@ -28,7 +31,7 @@ export const SkillCard = ({
         </CardItem>
         <CardItem
           translateZ="125"
-          className="text-sm font-medium text-white mt-2 text-center"
+          className="mt-2 flex min-h-8 w-full items-center justify-center text-center text-xs font-medium leading-tight text-white sm:min-h-10 sm:text-sm"
         >
           {text}
         </CardItem>

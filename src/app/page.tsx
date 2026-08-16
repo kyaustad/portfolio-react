@@ -1,38 +1,31 @@
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import WorkSection from "@/components/WorkSection";
-import ContactSection from "@/components/ContactSection";
-import Header from "@/components/Header";
-import GitHubStats from "@/components/GithubStats";
 import type { Metadata } from "next";
-
-// Force dynamic server side rendering
-export const dynamic = "force-dynamic";
+import { SiteShell } from "@/components/cyber/SiteShell";
+import {
+  HomeAboutContact,
+  HomeCategories,
+  HomeHero,
+  HomeSkills,
+} from "@/components/cyber/HomeSections";
+import GitHubStats from "@/components/GithubStats";
+import { siteMeta } from "@/data/portfolio";
 
 export const metadata: Metadata = {
-  title: "Kyle Austad - Full Stack Developer & Software Engineer",
+  title: "Kyle Austad — Full-Stack Engineer · Sales · Digital Creator",
   description:
-    "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
+    "Cybernetic portfolio for Kyle Austad — flagship work across Sales, Software, 3D Art, Game Dev, and side-project snippets.",
   openGraph: {
-    title: "Kyle Austad - Full Stack Developer & Software Engineer",
+    title: "Kyle Austad — Portfolio",
     description:
-      "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
+      "Select a category to explore flagship projects in Sales, Software, 3D Art, Game Dev, and Snippets.",
     type: "website",
     images: [
       {
         url: "/Portfolio.webp",
         width: 1200,
         height: 630,
-        alt: "Kyle Austad - Full Stack Developer Portfolio",
+        alt: "Kyle Austad Portfolio",
       },
     ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Kyle Austad - Full Stack Developer & Software Engineer",
-    description:
-      "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
-    images: ["/Portfolio.webp"],
   },
 };
 
@@ -40,10 +33,9 @@ export default function Home() {
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Person",
-    name: "Kyle Austad",
-    jobTitle: "Full Stack Developer & Software Engineer",
-    description:
-      "Full-stack developer specializing in React, Node.js, Vue.js, and modern web technologies. Portfolio showcasing projects including Order Place, Voyyance, Shrike LMS, and game development with Unreal Engine.",
+    name: siteMeta.name,
+    jobTitle: "Full Stack Engineer & Sales Closer",
+    description: siteMeta.tagline,
     url: process.env.NEXT_PUBLIC_BASE_URL || "https://kyleaustad.com",
     image: "/Portfolio.webp",
     sameAs: [
@@ -54,61 +46,31 @@ export default function Home() {
     knowsAbout: [
       "React",
       "Node.js",
-      "Vue.js",
       "TypeScript",
-      "JavaScript",
-      "Python",
-      "Rust",
-      "C++",
-      "PostgreSQL",
-      "MongoDB",
-      "AWS",
-      "Docker",
+      "Sales",
+      "Door-to-Door Sales",
       "Unreal Engine",
       "Blender",
-      "Full Stack Development",
-      "Web Development",
       "Game Development",
       "3D Rendering",
     ],
-    hasOccupation: {
-      "@type": "Occupation",
-      name: "Full Stack Developer",
-      description:
-        "Develops web applications using modern technologies including React, Node.js, Vue.js, and various databases",
-    },
-    alumniOf: {
-      "@type": "Organization",
-      name: "Software Engineering",
-    },
   };
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData),
-        }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
-      <div className="min-h-screen bg-gray-900">
-        <HeroSection />
-        <Header />
-
-        <div id="work">
-          <WorkSection />
-        </div>
-        <div id="about">
-          <AboutSection />
-        </div>
-        <div id="contact">
-          <ContactSection />
-        </div>
-        <div id="github" className="mt-2 p-16">
+      <SiteShell>
+        <HomeHero />
+        <HomeCategories />
+        <HomeSkills />
+        <HomeAboutContact />
+        <div id="github" className="px-4 pb-16 md:px-6">
           <GitHubStats />
         </div>
-        {/* Footer */}
-      </div>
+      </SiteShell>
     </>
   );
 }

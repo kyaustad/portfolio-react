@@ -71,15 +71,4 @@ export default {
 
   // Enable static optimization
   trailingSlash: false,
-
-  // Optimize bundle
-  webpack: (config, { isServer }) => {
-    if (!isServer) {
-      config.resolve.fallback = {
-        ...config.resolve.fallback,
-        fs: false,
-      };
-    }
-    return config;
-  },
 };

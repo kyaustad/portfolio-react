@@ -19,6 +19,7 @@ import {
 import { useState } from "react";
 import { Button } from "./ui/button";
 import { ImageIcon } from "lucide-react";
+import { originalImageSrc } from "@/lib/utils";
 
 export default function ImageCarousel({
   images,
@@ -61,9 +62,10 @@ export default function ImageCarousel({
                       alt={image}
                       width={1000}
                       height={1000}
+                      unoptimized
                       className="object-contain max-h-[50vh] sm:max-h-[60vh] w-auto max-w-full rounded-lg"
                       onClick={() => {
-                        window.open(image, "_blank");
+                        window.open(originalImageSrc(image), "_blank");
                       }}
                     />
                   </div>

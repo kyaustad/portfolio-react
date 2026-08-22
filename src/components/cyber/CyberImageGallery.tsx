@@ -10,7 +10,7 @@ import {
   DialogDescription,
   DialogTitle,
 } from "@/components/ui/dialog";
-import { cn } from "@/lib/utils";
+import { cn, originalImageSrc } from "@/lib/utils";
 
 function resolveGalleryImages(images: string[], featuredImage?: string) {
   if (featuredImage && !images.includes(featuredImage)) {
@@ -67,6 +67,7 @@ export function CyberImageLightbox({
   if (!images.length) return null;
 
   const activeImage = images[activeIndex] ?? images[0];
+  const originalSrc = originalImageSrc(activeImage);
 
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
@@ -96,7 +97,7 @@ export function CyberImageLightbox({
             </DialogDescription>
           </div>
           <a
-            href={activeImage}
+            href={originalSrc}
             target="_blank"
             rel="noopener noreferrer"
             className={cn(
@@ -119,15 +120,12 @@ export function CyberImageLightbox({
               transition={{ duration: 0.2 }}
               className="absolute inset-0 p-1.5 sm:p-3 md:p-6"
             >
-              <div className="relative h-full w-full">
-                <Image
-                  src={activeImage}
+              <div className="flex h-full w-full items-center justify-center">
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={originalSrc}
                   alt={`${title} photo ${activeIndex + 1}`}
-                  fill
-                  unoptimized
-                  priority
-                  className="object-contain"
-                  sizes="98vw"
+                  className="max-h-full max-w-full object-contain"
                 />
               </div>
             </motion.div>

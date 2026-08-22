@@ -299,7 +299,7 @@ export const artProjects: ArtProject[] = [
     tags: ["Prop", "Hard Surface", "Stylized", "VFX", "Exploded View"],
     featuredImage: "/blender/Exploded Saber 2.webp",
     images: ["/blender/Exploded Saber.webp"],
-    description: "Stylized character lighting and material pass.",
+    description: "Exploded view of a lightsaber done for a client on freelancer.com with custom materials, modeling and lighting.",
     links: { artstation: "https://www.artstation.com/artwork/qkm6e" },
   },
   {

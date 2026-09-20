@@ -49,6 +49,7 @@ export function HomeHero() {
 export function HomeCategories() {
   return (
     <MotionSection className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
+      {/* Blog Link Banner */}
       <div className="mb-6">
         <BlogBannerLink />
       </div>

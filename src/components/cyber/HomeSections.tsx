@@ -1,14 +1,12 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import {
-  categories,
-  contactLinks,
-  siteMeta,
-  skills,
-} from "@/data/portfolio";
+import { categories, contactLinks, siteMeta, skills } from "@/data/portfolio";
 import { CategoryCard } from "@/components/cyber/CategoryCard";
-import { SnippetsBannerLink } from "@/components/cyber/ProjectCards";
+import {
+  BlogBannerLink,
+  SnippetsBannerLink,
+} from "@/components/cyber/ProjectCards";
 import { MotionSection } from "@/components/cyber/Motion";
 import { SkillIcon } from "@/components/cyber/SkillIcon";
 import { SkillCard } from "@/components/SkillCard";
@@ -51,6 +49,9 @@ export function HomeHero() {
 export function HomeCategories() {
   return (
     <MotionSection className="mx-auto max-w-7xl px-4 pb-10 md:px-6">
+      <div className="mb-6">
+        <BlogBannerLink />
+      </div>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 xl:grid-cols-4">
         {categories.map((category, index) => (
           <CategoryCard key={category.id} category={category} index={index} />
@@ -65,7 +66,10 @@ export function HomeCategories() {
 
 export function HomeSkills() {
   return (
-    <MotionSection id="skills" className="mx-auto max-w-7xl px-4 py-12 sm:py-16 md:px-6">
+    <MotionSection
+      id="skills"
+      className="mx-auto max-w-7xl px-4 py-12 sm:py-16 md:px-6"
+    >
       <div className="mb-10 text-center">
         <h2 className="font-cyber-display text-4xl font-bold text-cyber-cyan text-glow-cyan md:text-5xl">
           SKILLS
@@ -79,7 +83,12 @@ export function HomeSkills() {
         {skills.map((skill) => (
           <SkillCard
             key={skill.id}
-            icon={<SkillIcon icon={skill.icon} className="h-10 w-10 sm:h-14 sm:w-14" />}
+            icon={
+              <SkillIcon
+                icon={skill.icon}
+                className="h-10 w-10 sm:h-14 sm:w-14"
+              />
+            }
             text={skill.label}
             className="border-cyber-cyan/30 bg-cyber-elevated/80"
           />
@@ -91,7 +100,10 @@ export function HomeSkills() {
 
 export function HomeAboutContact() {
   return (
-    <MotionSection id="contact" className="mx-auto max-w-4xl px-4 py-12 sm:py-16 md:px-6">
+    <MotionSection
+      id="contact"
+      className="mx-auto max-w-4xl px-4 py-12 sm:py-16 md:px-6"
+    >
       <div className="mb-10 text-center">
         <h2 className="font-cyber-display text-4xl font-bold text-cyber-cyan text-glow-cyan md:text-5xl">
           CONTACT
@@ -128,7 +140,9 @@ export function HomeAboutContact() {
             className="flex w-full items-center justify-center gap-3 border border-cyber-line px-5 py-3 transition-colors hover:border-cyber-cyan/50 sm:w-auto"
           >
             <DocumentIcon className="min-h-6 min-w-6" />
-            <span className="font-cyber-mono text-xs tracking-wider">Resume (docx)</span>
+            <span className="font-cyber-mono text-xs tracking-wider">
+              Resume (docx)
+            </span>
           </a>
           <a
             href={contactLinks.resumePdf}
@@ -137,26 +151,30 @@ export function HomeAboutContact() {
             className="flex w-full items-center justify-center gap-3 border border-cyber-line px-5 py-3 transition-colors hover:border-cyber-cyan/50 sm:w-auto"
           >
             <PDFIcon className="min-h-6 min-w-6" />
-            <span className="font-cyber-mono text-xs tracking-wider">Resume (pdf)</span>
+            <span className="font-cyber-mono text-xs tracking-wider">
+              Resume (pdf)
+            </span>
           </a>
         </div>
       </div>
 
       <div className="cyber-panel border-cyber-cyan/40 p-4 text-center sm:p-6 md:p-8">
         <p className="mb-6 text-lg text-cyber-text">
-          Ready to <span className="text-cyber-cyan">work together?</span> Let&apos;s
-          discuss your next project.
+          Ready to <span className="text-cyber-cyan">work together?</span>{" "}
+          Let&apos;s discuss your next project.
         </p>
         <div className="flex flex-col items-center justify-center gap-4 sm:flex-row sm:flex-wrap">
           <a
             href={contactLinks.email}
             className={cn(
               "flex w-full items-center justify-center gap-3 border border-cyber-line px-5 py-3 sm:w-auto",
-              "transition-colors hover:border-cyber-cyan/50"
+              "transition-colors hover:border-cyber-cyan/50",
             )}
           >
             <GmailIcon className="min-h-6 min-w-6" />
-            <span className="font-cyber-mono text-xs tracking-wider">Email Me</span>
+            <span className="font-cyber-mono text-xs tracking-wider">
+              Email Me
+            </span>
           </a>
           <a
             href={contactLinks.linkedin}
@@ -165,7 +183,9 @@ export function HomeAboutContact() {
             className="flex w-full items-center justify-center gap-3 border border-cyber-line px-5 py-3 transition-colors hover:border-cyber-cyan/50 sm:w-auto"
           >
             <LinkedInIcon className="min-h-6 min-w-6" />
-            <span className="font-cyber-mono text-xs tracking-wider">LinkedIn</span>
+            <span className="font-cyber-mono text-xs tracking-wider">
+              LinkedIn
+            </span>
           </a>
           <a
             href={contactLinks.github}
@@ -174,7 +194,9 @@ export function HomeAboutContact() {
             className="flex w-full items-center justify-center gap-3 border border-cyber-line px-5 py-3 transition-colors hover:border-cyber-cyan/50 sm:w-auto"
           >
             <GithubIcon className="min-h-6 min-w-6" />
-            <span className="font-cyber-mono text-xs tracking-wider">GitHub</span>
+            <span className="font-cyber-mono text-xs tracking-wider">
+              GitHub
+            </span>
           </a>
           {/* <a
             href={contactLinks.contra}

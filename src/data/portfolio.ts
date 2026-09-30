@@ -102,7 +102,7 @@ export const salesEntries: SalesEntry[] = [
     stats: [
       { value: "200+", label: "Accounts Activated" },
       { value: "1", label: "LMS Platform Built" },
-      { value: "20+", label: "Reps Trained" }
+      { value: "20+", label: "Reps Trained" },
     ],
     skills: [
       "Territory Management",
@@ -110,7 +110,7 @@ export const salesEntries: SalesEntry[] = [
       "Start-up Experience",
       "Agile",
     ],
-    photos: ["/shrike/shrike-1.webp"]
+    photos: ["/shrike/shrike-1.webp"],
   },
   {
     id: "fox",
@@ -133,7 +133,13 @@ export const salesEntries: SalesEntry[] = [
       "Sales Training",
       "Sales Management",
     ],
-    photos: ["/fox/fox-1.webp", "/fox/fox-2.webp", "/fox/fox-3.webp", "/fox/fox-4.webp", "/fox/fox-5.webp"],
+    photos: [
+      "/fox/fox-1.webp",
+      "/fox/fox-2.webp",
+      "/fox/fox-3.webp",
+      "/fox/fox-4.webp",
+      "/fox/fox-5.webp",
+    ],
   },
 ];
 
@@ -153,7 +159,7 @@ export const softwareProjects: SoftwareProject[] = [
       "/nerevar/nerevar (4).webp",
       "/nerevar/nerevar (5).webp",
       "/nerevar/nerevar (6).webp",
-      "/nerevar/nerevar (7).webp"
+      "/nerevar/nerevar (7).webp",
     ],
     banner: "/nerevar/nerevar (1).webp",
     links: {
@@ -167,7 +173,14 @@ export const softwareProjects: SoftwareProject[] = [
     status: "shipped",
     description:
       "Multi-tenant order management for vendors and customers — catalogues, client invites, and direct Stripe payments without manufacturer markup.",
-    tech: ["React", "TypeScript", "Node.js", "PostgreSQL", "Supabase", "Tailwind"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Supabase",
+      "Tailwind",
+    ],
     images: [
       "/orderapp/orderapp-1.webp",
       "/orderapp/orderapp-2.webp",
@@ -195,7 +208,15 @@ export const softwareProjects: SoftwareProject[] = [
     status: "offline",
     description:
       "Sales ops platform for door-to-door. Led feature work on dynamic emails, earnings projections, and local-first native app architecture.",
-    tech: ["React", "TypeScript", "Python", "PostgreSQL", "AWS", "Docker", "Rust"],
+    tech: [
+      "React",
+      "TypeScript",
+      "Python",
+      "PostgreSQL",
+      "AWS",
+      "Docker",
+      "Rust",
+    ],
     images: [
       "/voyyance/1.png",
       "/voyyance/2.png",
@@ -206,8 +227,7 @@ export const softwareProjects: SoftwareProject[] = [
     banner: "/voyyance/1.png",
     links: {
       live: "https://voyyance.com",
-      linkedin:
-        "https://lnkd.in/p/g7XnQYnc",
+      linkedin: "https://lnkd.in/p/g7XnQYnc",
     },
   },
   {
@@ -217,7 +237,14 @@ export const softwareProjects: SoftwareProject[] = [
     status: "shipped",
     description:
       "Custom LMS built for speed and flexibility — training without enterprise LMS pricing, with rich content and modern UI.",
-    tech: ["TypeScript", "Node.js", "MongoDB", "PostgreSQL", "Supabase", "Docker"],
+    tech: [
+      "TypeScript",
+      "Node.js",
+      "MongoDB",
+      "PostgreSQL",
+      "Supabase",
+      "Docker",
+    ],
     images: [
       "/lms/1.png",
       "/lms/2.png",
@@ -260,7 +287,6 @@ export const softwareProjects: SoftwareProject[] = [
         "https://www.linkedin.com/pulse/justcanvas-app-api-kyle-austad-nsdlc/",
     },
   },
-  
 ];
 
 export const artProjects: ArtProject[] = [
@@ -270,8 +296,13 @@ export const artProjects: ArtProject[] = [
     year: "2022",
     tags: ["Character", "Cycles", "Particles", "Custom Shaders", "Cloth"],
     featuredImage: "/blender/red-woman.webp",
-    description: "A character and particle study with entirely custom materials and shaders and hand modeled clothing. View the full gallery on ArtStation.",
-    images: ["/blender/red-woman-2.webp", "/blender/red-woman-3.webp", "/blender/red-woman-4.webp"],
+    description:
+      "A character and particle study with entirely custom materials and shaders and hand modeled clothing. View the full gallery on ArtStation.",
+    images: [
+      "/blender/red-woman-2.webp",
+      "/blender/red-woman-3.webp",
+      "/blender/red-woman-4.webp",
+    ],
     links: { artstation: "https://www.artstation.com/artwork/4NkAG1" },
   },
   {
@@ -280,7 +311,8 @@ export const artProjects: ArtProject[] = [
     year: "2023",
     tags: ["Prop", "Hard Surface", "Lookdev", "Substance Painter", "Texturing"],
     featuredImage: "/blender/tv1.webp",
-    description: "Custom modeled and textured using Substance Painter. A widescreen take on a CRT classic.",
+    description:
+      "Custom modeled and textured using Substance Painter. A widescreen take on a CRT classic.",
     images: ["/blender/tv2.webp", "/blender/tv3.webp", "/blender/tv4.webp"],
     links: { artstation: "https://www.artstation.com/artwork/V2bwEZ" },
   },
@@ -288,7 +320,13 @@ export const artProjects: ArtProject[] = [
     id: "cologne",
     title: "Adidas Cologne",
     year: "2014",
-    tags: ["Hard Surface", "Lookdev", "Product Visualization", "Modeling", "Texturing"],
+    tags: [
+      "Hard Surface",
+      "Lookdev",
+      "Product Visualization",
+      "Modeling",
+      "Texturing",
+    ],
     featuredImage: "/blender/AdidasCologne.webp",
     description: "Hard-surface prop study.",
   },
@@ -308,14 +346,23 @@ export const artProjects: ArtProject[] = [
     year: "2024",
     tags: ["Environment", "Cycles", "Volumetrics", "Lighting"],
     featuredImage: "/blender/foggyorchard.webp",
-    description: "Environment lighting and composition for a gloomy and foggy orchard scene.",
+    description:
+      "Environment lighting and composition for a gloomy and foggy orchard scene.",
   },
   {
     id: "fall-overlook",
     title: "Fall Overlook",
     year: "2022",
-    tags: ["Environment", "Character", "Fantasy", "Cycles", "Lighting", "AI Concept"],
-    description: "Fantasy environment and character lighting and composition for a fall overlook scene. Used AI in the early days of image generation to create a concept then entirely recreate it in Blender Cycles.",
+    tags: [
+      "Environment",
+      "Character",
+      "Fantasy",
+      "Cycles",
+      "Lighting",
+      "AI Concept",
+    ],
+    description:
+      "Fantasy environment and character lighting and composition for a fall overlook scene. Used AI in the early days of image generation to create a concept then entirely recreate it in Blender Cycles.",
     featuredImage: "/blender/overlook.webp",
     images: ["/blender/overlook-clay.webp", "/blender/overlook-ai.webp"],
     links: { artstation: "https://www.artstation.com/artwork/8BZA3O" },
@@ -326,7 +373,8 @@ export const artProjects: ArtProject[] = [
     year: "2017",
     tags: ["Environment", "Stylized", "Low-Poly", "Landscape"],
     featuredImage: "/blender/myspot.webp",
-    description: "Still one of my favorites. A simple low poly scene from my early days of Blender. An attempt to invoke the memory of biking to the nearby resevoir to fish for a day.",
+    description:
+      "Still one of my favorites. A simple low poly scene from my early days of Blender. An attempt to invoke the memory of biking to the nearby resevoir to fish for a day.",
     links: { artstation: "https://www.artstation.com/artwork/akqD2" },
   },
   {
@@ -335,7 +383,8 @@ export const artProjects: ArtProject[] = [
     year: "2018",
     tags: ["Environment", "Archviz", "Interior", "Cycles"],
     featuredImage: "/blender/intkitchen.webp",
-    description: "Using Dwell Magazine, I recreated an interior kitchen scene with a modern and minimalistic design.",
+    description:
+      "Using Dwell Magazine, I recreated an interior kitchen scene with a modern and minimalistic design.",
     links: { artstation: "https://www.artstation.com/artwork/O6eP6" },
   },
   {
@@ -345,16 +394,25 @@ export const artProjects: ArtProject[] = [
     tags: ["Archviz", "Interior", "Cycles", "Product Visualization"],
     featuredImage: "/blender/interiorwine.webp",
     images: ["/blender/interiorstairs.webp"],
-    description: "A simple first attempt at Architectural Visualization with Blender Cycles with an accompanying close up of the wine bottle.",
+    description:
+      "A simple first attempt at Architectural Visualization with Blender Cycles with an accompanying close up of the wine bottle.",
     links: { artstation: "https://www.artstation.com/artwork/eR9O8G" },
   },
   {
     id: "portal",
     title: "Portal",
     year: "2017",
-    tags: ["Fantasy", "Interior", "Particles", "Cell Fracture", "Decals", "Cycles"],
+    tags: [
+      "Fantasy",
+      "Interior",
+      "Particles",
+      "Cell Fracture",
+      "Decals",
+      "Cycles",
+    ],
     featuredImage: "/blender/Portal1.webp",
-    description: "An interior scene with a demonic portal and claws. Something dangerous happened here. Done for a BlenderGuru contest and learned a lot about cell fracture, decal painting and particle systems.",
+    description:
+      "An interior scene with a demonic portal and claws. Something dangerous happened here. Done for a BlenderGuru contest and learned a lot about cell fracture, decal painting and particle systems.",
     links: { artstation: "https://www.artstation.com/artwork/Bl91l" },
   },
   {
@@ -363,7 +421,8 @@ export const artProjects: ArtProject[] = [
     year: "2024",
     tags: ["Character", "Close-up", "Headshot", "Daz", "Diffeomorphic"],
     featuredImage: "/blender/Rosa Marie.webp",
-    description: "A simple headshot of a character from Daz polished and editted in Blender using Diffeomorphic.",
+    description:
+      "A simple headshot of a character from Daz polished and editted in Blender using Diffeomorphic.",
     links: { artstation: "https://www.artstation.com/artwork/Nqo1dq" },
   },
   {
@@ -372,7 +431,8 @@ export const artProjects: ArtProject[] = [
     year: "2022",
     tags: ["Environment", "Fantasy", "Volumetrics", "Fan Art", "Cycles"],
     featuredImage: "/blender/Vvardenfell.webp",
-    description: "A recreation of some art from The Elder Scrolls III: Morrowind with a modern take and volumetrics. Pretty happy with how it turned out.",
+    description:
+      "A recreation of some art from The Elder Scrolls III: Morrowind with a modern take and volumetrics. Pretty happy with how it turned out.",
     links: { artstation: "https://www.artstation.com/artwork/Ez136v" },
   },
   {
@@ -381,16 +441,24 @@ export const artProjects: ArtProject[] = [
     year: "2018",
     tags: ["Environment", "Cloth Simulation", "Wind Simulation", "Cycles"],
     featuredImage: "/blender/roadtarp.webp",
-    description: "Using cloth simulation and wind forces, I created a road tarp billowing across an empty desert road scene.",
+    description:
+      "Using cloth simulation and wind forces, I created a road tarp billowing across an empty desert road scene.",
     links: { artstation: "https://www.artstation.com/artwork/qkmNe" },
   },
   {
     id: "royal-woman",
     title: "Royal Woman",
     year: "2022",
-    tags: ["Character", "Cloth", "Human Generator", "Custom Materials", "Modeling"],
+    tags: [
+      "Character",
+      "Cloth",
+      "Human Generator",
+      "Custom Materials",
+      "Modeling",
+    ],
     featuredImage: "/blender/Royal Woman 2.webp",
-    description: "Using Human Generator for Blender and custom modeling and materials, I created an elegent and tribally regal dressed woman.",
+    description:
+      "Using Human Generator for Blender and custom modeling and materials, I created an elegent and tribally regal dressed woman.",
     images: ["/blender/Royal Woman.webp"],
     links: { artstation: "https://www.artstation.com/artwork/oJy4Nk" },
   },
@@ -398,9 +466,17 @@ export const artProjects: ArtProject[] = [
     id: "vette",
     title: "Vette",
     year: "2021",
-    tags: ["Character", "Close-up", "Headshot", "Modeling", "Texturing", "Fan Art"],
+    tags: [
+      "Character",
+      "Close-up",
+      "Headshot",
+      "Modeling",
+      "Texturing",
+      "Fan Art",
+    ],
     featuredImage: "/blender/Vette Portrait.webp",
-    description: "A custom modeled and textured character recreating the character Vette from Star Wars: The Old Republic.",
+    description:
+      "A custom modeled and textured character recreating the character Vette from Star Wars: The Old Republic.",
     images: ["/blender/Vette Reference.webp"],
     links: { artstation: "https://www.artstation.com/artwork/eR9OBw" },
   },
@@ -423,7 +499,10 @@ export const gameProjects: GameProject[] = [
       "/metro/m-6.jpg",
     ],
     banner: "/metro/metro-banner.jpg",
-    links: { itch: "https://thiscketcrab.itch.io/metro-island", live: "https://thiscketcrab.itch.io/metro-island" },
+    links: {
+      itch: "https://thiscketcrab.itch.io/metro-island",
+      live: "https://thiscketcrab.itch.io/metro-island",
+    },
   },
   {
     id: "unreal-assets",
@@ -457,7 +536,11 @@ export const snippetProjects: SnippetProject[] = [
     description:
       "A simple vibe-coded companion app to make adding books via torrent easy to manage for users of an audiobookshelf instance.",
     tech: ["Svelte", "Rust", "Docker"],
-    images: ["/audiobooker/1.webp", "/audiobooker/2.webp", "/audiobooker/3.webp"],
+    images: [
+      "/audiobooker/1.webp",
+      "/audiobooker/2.webp",
+      "/audiobooker/3.webp",
+    ],
     banner: "/audiobooker/3.webp",
     links: {
       github: "https://github.com/kyaustad/audiobooker",
@@ -478,7 +561,7 @@ export const snippetProjects: SnippetProject[] = [
       github: "https://github.com/kyaustad/cardyo",
     },
   },
- 
+
   {
     id: "raidash",
     title: "Raidash",
@@ -498,9 +581,9 @@ export const snippetProjects: SnippetProject[] = [
     description:
       "A simple command line tool to process archives, and nested archives of content downloaded from outside the Daz Studio marketplace and correctly place it either in the Daz Install Manager for it to install, or in the content library itself, all hands free.",
     tech: ["Rust"],
-    
+
     links: { github: "https://github.com/kyaustad/daz-sailor" },
-  }
+  },
 ];
 
 export const skills: Skill[] = [
@@ -535,6 +618,7 @@ export const contactLinks = {
   linkedin: "https://www.linkedin.com/in/kyle-austad/",
   github: "https://github.com/kyaustad",
   artstation: "https://www.artstation.com/kyaustad",
+  blog: "https://blog.kyleaustad.dev",
   contra:
     "https://contra.com/kyle_austad_n2c7ok30?utm_campaign=HireMeOnContra&utm_medium=fe9676dd-36b2-4d40-be86-0006a71b3400",
   resumeDocx:

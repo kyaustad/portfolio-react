@@ -3,9 +3,19 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { motion, useReducedMotion } from "framer-motion";
-import { ExternalLink, MenuIcon } from "lucide-react";
+import {
+  ExternalLink,
+  MenuIcon,
+  PencilIcon,
+  PenSquareIcon,
+} from "lucide-react";
 import { useState } from "react";
-import { categories, contactLinks, siteMeta, snippetsCategory } from "@/data/portfolio";
+import {
+  categories,
+  contactLinks,
+  siteMeta,
+  snippetsCategory,
+} from "@/data/portfolio";
 import { GithubIcon, LinkedInIcon } from "@/components/Icons";
 import { getAccent } from "@/lib/cyber-theme";
 import { cn } from "@/lib/utils";
@@ -62,14 +72,17 @@ function NavLink({
       onClick={onClick}
       className={cn(
         "relative px-2 py-2.5 font-cyber-mono text-xs uppercase tracking-[0.2em] transition-colors md:px-1.5 md:py-1 md:text-[10px] md:tracking-[0.12em] lg:px-2 lg:text-xs lg:tracking-[0.2em]",
-        active ? styles.text : "text-cyber-muted hover:text-cyber-text"
+        active ? styles.text : "text-cyber-muted hover:text-cyber-text",
       )}
     >
       {label}
       {active && (
         <motion.span
           layoutId="nav-underline"
-          className={cn("absolute -bottom-1 left-0 right-0 h-0.5", styles.underline)}
+          className={cn(
+            "absolute -bottom-1 left-0 right-0 h-0.5",
+            styles.underline,
+          )}
           transition={{ type: "spring", stiffness: 380, damping: 30 }}
         />
       )}
@@ -102,50 +115,62 @@ export function CyberNav() {
           className={cn(
             "min-w-0 truncate font-cyber-mono text-xs tracking-[0.1em] min-[380px]:text-sm min-[380px]:tracking-[0.12em]",
             brandStyles.text,
-            brandStyles.glow
+            brandStyles.glow,
           )}
         >
           {siteMeta.brand}
         </Link>
 
         <nav className="hidden flex-wrap items-center justify-end gap-1 md:flex lg:gap-2">
-            {navItems.map((item) => (
-              <NavLink
-                key={item.id}
-                href={item.href}
-                label={item.label}
-                active={isActive(item.href, item.id)}
-                accent={
-                  ("accent" in item && item.accent
-                    ? item.accent
-                    : brandAccent) as AccentColor
-                }
-              />
-            ))}
-            <div className="ml-1 flex items-center gap-1 border-l border-cyber-line pl-2 lg:ml-2 lg:pl-3">
-              <a
-                href={contactLinks.linkedin}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="LinkedIn (opens in a new tab)"
-                title="LinkedIn — external link"
-                className="relative flex h-9 w-9 items-center justify-center rounded-sm border border-cyber-line text-cyber-muted transition-colors hover:border-cyber-cyan/50 hover:text-cyber-cyan"
-              >
-                <LinkedInIcon className="h-4 w-4" />
-                <ExternalLink className="absolute right-0.5 top-0.5 h-2.5 w-2.5" />
-              </a>
-              <a
-                href={contactLinks.github}
-                target="_blank"
-                rel="noopener noreferrer"
-                aria-label="GitHub (opens in a new tab)"
-                title="GitHub — external link"
-                className="relative flex h-9 w-9 items-center justify-center rounded-sm border border-cyber-line text-cyber-muted transition-colors hover:border-cyber-cyan/50 hover:text-cyber-cyan"
-              >
-                <GithubIcon className="h-4 w-4" />
-                <ExternalLink className="absolute right-0.5 top-0.5 h-2.5 w-2.5" />
-              </a>
-            </div>
+          {navItems.map((item) => (
+            <NavLink
+              key={item.id}
+              href={item.href}
+              label={item.label}
+              active={isActive(item.href, item.id)}
+              accent={
+                ("accent" in item && item.accent
+                  ? item.accent
+                  : brandAccent) as AccentColor
+              }
+            />
+          ))}
+          <div className="ml-1 flex items-center gap-1 border-l border-cyber-line pl-2 lg:ml-2 lg:pl-3">
+            <a
+              href={contactLinks.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn (opens in a new tab)"
+              title="LinkedIn — external link"
+              className="relative flex h-9 w-9 items-center justify-center rounded-sm border border-cyber-line text-cyber-muted transition-colors hover:border-cyber-cyan/50 hover:text-cyber-cyan"
+            >
+              <LinkedInIcon className="h-4 w-4" />
+              <ExternalLink className="absolute right-0.5 top-0.5 h-2.5 w-2.5" />
+            </a>
+            <a
+              href={contactLinks.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub (opens in a new tab)"
+              title="GitHub — external link"
+              className="relative flex h-9 w-9 items-center justify-center rounded-sm border border-cyber-line text-cyber-muted transition-colors hover:border-cyber-cyan/50 hover:text-cyber-cyan"
+            >
+              <GithubIcon className="h-4 w-4" />
+              <ExternalLink className="absolute right-0.5 top-0.5 h-2.5 w-2.5" />
+            </a>
+            <a
+              href={contactLinks.blog}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Blog (opens in a new tab)"
+              title="Blog — external link"
+              className="relative flex h-9 w-20  flex-row gap-2 items-center justify-center rounded-sm border border-cyber-line text-cyber-muted transition-colors hover:border-cyber-cyan/50 hover:text-cyber-cyan"
+            >
+              <PenSquareIcon className="h-4 w-4 text-cyber-orange/75" />
+              <p className="text-cyber-orange/75">Blog</p>
+              <ExternalLink className="absolute right-0.5 top-0.5 h-2.5 w-2.5 " />
+            </a>
+          </div>
         </nav>
 
         <div className="shrink-0 md:hidden">
@@ -154,8 +179,8 @@ export function CyberNav() {
               <Button
                 variant="outline"
                 size="icon"
-              className="h-11 w-11 border-cyber-line bg-transparent text-cyber-text"
-              aria-label="Open navigation menu"
+                className="h-11 w-11 border-cyber-line bg-transparent text-cyber-text"
+                aria-label="Open navigation menu"
               >
                 <MenuIcon className="h-5 w-5" />
               </Button>
@@ -200,6 +225,17 @@ export function CyberNav() {
                   >
                     <GithubIcon className="h-4 w-4 shrink-0" />
                     GitHub
+                    <ExternalLink className="ml-auto h-3 w-3 shrink-0" />
+                  </a>
+                  <a
+                    href={contactLinks.blog}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setOpen(false)}
+                    className="flex min-h-11 w-full col-span-2 items-center gap-2 border border-cyber-line px-3 font-cyber-mono text-[10px] uppercase tracking-[0.14em] text-cyber-muted transition-colors hover:border-cyber-cyan/50 hover:text-cyber-cyan"
+                  >
+                    <PenSquareIcon className="h-4 w-4 shrink-0 text-cyber-orange/75" />
+                    <p className="">Blog</p>
                     <ExternalLink className="ml-auto h-3 w-3 shrink-0" />
                   </a>
                 </div>

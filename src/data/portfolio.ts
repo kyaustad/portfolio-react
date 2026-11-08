@@ -145,6 +145,33 @@ export const salesEntries: SalesEntry[] = [
 
 export const softwareProjects: SoftwareProject[] = [
   {
+    id: "magpieos",
+    title: "MagpieOS",
+    year: "2026",
+    status: "in-progress",
+    description:
+      "A foundational software platform for reusable microservices that allow rapid creation of SaaS offerings with a highly orthogonal and modular architecture. MagpieOS is the foundation for software offerings that allows small to medium sized businesses to easily use tools designed for specific use cases. Magpie's first offering is an advanced LMS system called Penguin.",
+    tech: ["React", "Git", "Postgres", "Supabase", "Hono"],
+    images: [
+      "/magpie/magpie (1).webp",
+      "/magpie/magpie (2).webp",
+      "/magpie/magpie (3).webp",
+      "/magpie/magpie (4).webp",
+      "/magpie/magpie (5).webp",
+      "/magpie/magpie (6).webp",
+      "/magpie/magpie (7).webp",
+      "/magpie/magpie (8).webp",
+      "/magpie/magpie (9).webp",
+      "/magpie/magpie (10).webp",
+      "/magpie/magpie (11).webp",
+      "/magpie/magpie (12).webp",
+    ],
+    banner: "/magpie/magpie (5).webp",
+    links: {
+      live: "https://magpieos.app",
+    },
+  },
+  {
     id: "nerevar-rs",
     title: "Nerevar",
     year: "2026",

@@ -60,6 +60,7 @@ const skillIconByLabel: Record<string, Skill["icon"]> = {
   express: "express",
   expressjs: "express",
   supabase: "supabase",
+  hono: "hono",
   aws: "aws",
   python: "python",
   react: "react",

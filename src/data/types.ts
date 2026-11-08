@@ -117,6 +117,7 @@ export interface Skill {
     | "tailwind"
     | "express"
     | "supabase"
+    | "hono"
     | "aws"
     | "python"
     | "react"
